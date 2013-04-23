@@ -1,6 +1,6 @@
 {
   "name": "rendirect",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Use the awesome meta refresh tag to render something and redirect to another page.",
   "main": "index.js",
   "scripts": {
