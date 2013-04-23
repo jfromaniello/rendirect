@@ -4,8 +4,16 @@
     <meta http-equiv="refresh" content="<%= wait %>;URL='<%= url %>'">
 </head>
 <body>
-    <strong>
-        <%= message %>
-    </strong>
+    <p><%= message %> <span id="counter"><span></p>
 </body>
+<script type="text/javascript">
+    var counter = document.getElementById('counter');
+    var elapsed = <%= wait %>;
+    counter.textContent = elapsed;
+    var intv = setInterval(function(){
+        elapsed -= 1;
+        counter.textContent = elapsed;
+        if (elapsed == 0) clearInterval(intv);
+    }, 1000);
+</script>
 </html>
