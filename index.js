@@ -4,7 +4,7 @@ var defaultTemplate = ejs.compile(fs.readFileSync(__dirname + '/defaultTemplate.
 
 module.exports = function (options) {
   return function (req, res, next) {
-    req.rendirect = function (rendirOptions) {
+    res.rendirect = function (rendirOptions) {
       
       if (!rendirOptions.url) {
         throw new Error('rendirect: url is required');

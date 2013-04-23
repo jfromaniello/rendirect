@@ -4,11 +4,11 @@ var rendirect = require('../');
 
 describe('rendirects!', function () {
   it('should add the rendirect function to the request object', function () {
-    var req = {};
+    var res = {};
     
-    rendirect()(req, {}, function(){});
+    rendirect()({}, res, function(){});
     
-    expect(req.rendirect)
+    expect(res.rendirect)
       .to.be.a('function');
   });
 
@@ -36,7 +36,7 @@ describe('rendirects!', function () {
 
       rendirect()(req, res, function(){});
 
-      req.rendirect({ wait: 5, message: 'Jose is redirecting you', url: 'http://google.com'});
+      res.rendirect({ wait: 5, message: 'Jose is redirecting you', url: 'http://google.com'});
     });
 
     it('should put the Content-Type', function () {
@@ -81,7 +81,7 @@ describe('rendirects!', function () {
 
       rendirect({view: 'myrendirect'})(req, res, function(){});
 
-      req.rendirect({ wait: 5, message: 'Jose is redirecting you', url: 'http://google.com'});
+      res.rendirect({ wait: 5, message: 'Jose is redirecting you', url: 'http://google.com'});
     });
 
     it('should work', function () {
