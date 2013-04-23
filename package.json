@@ -1,0 +1,28 @@
+{
+  "name": "rendirect",
+  "version": "0.0.1",
+  "description": "Use the awesome meta refresh tag to render something and redirect to another page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jfromaniello/rendirect.git"
+  },
+  "keywords": [
+    "redirect",
+    "refresh",
+    "tag"
+  ],
+  "author": "José F. Romaniello <jfromaniello@gmail.com> (http://joseoncode.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "~1.5.0",
+    "mocha": "~1.9.0",
+    "jsdom": "~0.6.0"
+  },
+  "dependencies": {
+    "ejs": "~0.8.3"
+  }
+}
