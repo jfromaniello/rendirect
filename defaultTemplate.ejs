@@ -1,19 +1,21 @@
 <html>
 <head>
     <title></title>
-    <meta http-equiv="refresh" content="<%= wait %>;URL='<%= url %>'">
+    <meta http-equiv="refresh" content="<%= wait || 0 %>;URL='<%= url %>'">
 </head>
 <body>
+<%if (wait) { -%>
     <p><%= message %> <span id="counter"><span></p>
-</body>
-<script type="text/javascript">
-    var counter = document.getElementById('counter');
-    var elapsed = <%= wait %>;
-    counter.textContent = elapsed;
-    var intv = setInterval(function(){
-        elapsed -= 1;
+    <script type="text/javascript">
+        var counter = document.getElementById('counter');
+        var elapsed = <%= wait %>;
         counter.textContent = elapsed;
-        if (elapsed == 0) clearInterval(intv);
-    }, 1000);
-</script>
+        var intv = setInterval(function(){
+            elapsed -= 1;
+            counter.textContent = elapsed;
+            if (elapsed == 0) clearInterval(intv);
+        }, 1000);
+    </script>
+<% } -%>
+</body>
 </html>
