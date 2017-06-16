@@ -19,10 +19,10 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "~1.5.0",
-    "mocha": "~1.9.0",
-    "jsdom": "~0.6.0"
+    "jsdom": "^4.0.2",
+    "mocha": "~1.9.0"
   },
   "dependencies": {
-    "ejs": "~0.8.3"
+    "ejs": "^2.5.5"
   }
 }
